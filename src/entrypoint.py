@@ -235,8 +235,7 @@ def run(vector, where=SOURCE_ROOT, show_version=False, show_help=False):
         print("captured output on standard error:")
         for line in completed.stderr.decode(ENCODING, errors="ignore").split("\n"):
             print(" ", line)
-    return None
-
+    return completed.returncode
 
 def main():
     """Drive the parameter extraction and execution of cppcheck."""
